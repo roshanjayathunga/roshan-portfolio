@@ -614,19 +614,31 @@ header .btn-wrap span{
 }
 
 .modal .popup .popup-inner{
+    text-align: center;
     position: relative;
     bottom: -100vw;
     right: -100vh;
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
     max-width: 1000px;
-    max-height: 600px;
+    max-height: 2400px;
     width: 100%;
     height: 100%;
     background-color: white;
     transform: rotate(32deg);
     transition: 0.7s ease-in-out;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.modal .popup .popup-inner::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.modal .popup .popup-inner {
+    -ms-overflow-style: none;
+}
+
 .modal .popup:target{
     visibility: visible;
     opacity: 1;
@@ -635,9 +647,20 @@ header .btn-wrap span{
     bottom: 0;
     right: 0;
     transform: rotate(0);
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .modal .popup-close{
     position: absolute;
+    top: 3px;
+    right: 3px;
+    padding: 5px 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    border-radius: 100%;
+    background-color: #FFC107;
+    color: #ffffff;
 }
 
 /*contact me*/
